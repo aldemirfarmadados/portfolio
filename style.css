@@ -1,0 +1,166 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURAÇÃO GLOBAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #020617; /* azul marinho escuro */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* HERO / CABEÇALHO */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(180deg, #020617, #020617);
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.descricao {
+    max-width: 900px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    color: #d1d5db;
+}
+
+/* FOTO DE PERFIL */
+.perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+}
+
+/* SEÇÃO PROJETOS */
+.projetos {
+    padding: 60px 40px;
+}
+
+.projetos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+/* GRID DOS PROJETOS */
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* CARD DOS PROJETOS */
+.card {
+    background-color: #020617;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* ANIMAÇÃO (inicial) */
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* IMAGEM DO PROJETO */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* TÍTULO DO PROJETO */
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* TEXTO DO PROJETO */
+.card p {
+    font-size: 0.95rem;
+    color: #d1d5db;
+}
+
+/* LINK */
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #38bdf8;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* SEÇÃO CONTATO */
+.contato {
+    background-color: #020617;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contato a {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contato p {
+    margin-top: 8px;
+    color: #d1d5db;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    background-color: #020617;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .descricao {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
